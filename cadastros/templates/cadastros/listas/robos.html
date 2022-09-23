@@ -1,0 +1,41 @@
+{% extends 'paginas/modelo-robos.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+    <h3>Listar Robos Cadastrados</h3>
+
+    <hr>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>ID/th>
+                <th>numero</th>
+                <th>Descricao</th>
+                <th>Pontos</th>
+                <th>Opcoes</th>
+            </tr>
+
+            {% for robos in object_list %}
+                <tr>
+                    <td>{{ robos.pk }}</td>
+                    <td>{{ robos.numero }}</td>
+                    <td>{{ robos.descricao }}</td>
+                    <td>{{ robos.pontos }}</td>
+                    <td>
+                        <a href="{% url 'editar-robos' robos.pk %}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{% url 'excluir-robos' robos.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+                
+
+            {% empty %}
+                <tr>
+                    <td colspan="3">Nenhum robo registrado</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+
+{% endblock conteudo %}
