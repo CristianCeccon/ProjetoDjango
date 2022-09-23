@@ -6,3 +6,6 @@ class IndexView(TemplateView):
     
 class SobreView(TemplateView):
     template_name = "paginas/sobre.html"
+    
+class RoboView(TemplateView):
+    template_name = "paginas/modelo-robos.html"
