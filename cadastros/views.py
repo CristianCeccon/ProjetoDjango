@@ -2,7 +2,7 @@ from dataclasses import fields
 from re import template
 import django
 from django.shortcuts import render
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Campo, Robos
 
@@ -31,7 +31,21 @@ class CampoUpdate(UpdateView):
     
 
 class RobosUpdate(UpdateView):
-    model = Campo
+    model = Robos
     fields = ['numero', 'descricao', 'pontos', 'detalhes', 'campo']
     template_name = 'cadastros/form.html'
+    success_url = reverse_lazy('index')
+
+####
+
+
+class CampoDelete(DeleteView):
+    model = Campo
+    template_name = 'cadastros/form-excluir.html'
+    success_url = reverse_lazy('index')
+
+
+class RobosDelete(DeleteView):
+    model = Robos
+    template_name = 'cadastros/form-excluir.html'
     success_url = reverse_lazy('index')
