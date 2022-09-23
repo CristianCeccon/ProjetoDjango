@@ -1,16 +1,13 @@
+{% extends 'paginas/modelo.html' %}
+
 {% load static %}
 
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+{% block titulo %}
     <title>Pagina Inicial</title>
+{% endblock titulo %}
 
-    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
-
-</head>
-<body>
-    <h3> Pagina Inicial </h3>
+{% block conteudo %}
+    <h1>Pagina Inicial</h1>
 
     <img src="{% static 'img/logo.png' %}" width="200" alt="">
-</body>
+{% endblock conteudo %}
