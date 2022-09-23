@@ -1,8 +1,11 @@
 from django.urls import path
-from .views import IndexView, SobreView, RoboView
+from .views import CampoCreaete, RobosCreate
+from .views import CampoUpdate, RobosUpdate
 
 urlpatterns = [
-    path('inicio/sistema', IndexView.as_view(), name="index"),
-    path('sobre/', SobreView.as_view(), name="sobre"),
-    path('robos/', RoboView.as_view(), name="robos"),
+    path('cadastrar/campo', CampoCreaete.as_view(), name="cadastrar-campo"),
+    path('cadastrar/robos', RobosCreate.as_view(), name="cadastrar-robos"),
+    
+    path('editar/campo/<int:pk>/', CampoUpdate.as_view(), name="editar-campo"),
+    path('editar/robos/<int:pk>/', RobosUpdate.as_view(), name="editar-robos"),
 ]
