@@ -66,18 +66,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mr-auto">
-                        <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >_________________________________________________________</a>
+                        <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >______________________________________</a>
                         <a name="Inicio" id="Inicio" class="btn btn-dark" href="{% url 'index' %}" role="button" >Inicio</a>
                         <!--{% if request.user.is_authenticated %}-->
                         {% endif %}
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
                         <a name="Sobre" id="sobre"  class="btn btn-dark" href="{% url 'sobre' %}" role="button" >Sobre</a>
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
+                        <a name="Sobre" id="sobre"  class="btn btn-dark" href="{% url 'cadastrar-robos'%}" role="button" >CadastrarRobos</a>
+                        <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
+                        <a name="Sobre" id="sobre"  class="btn btn-dark" href="{% url 'cadastrar-campo'%}" role="button" >CadastrarCampos</a>
+                        <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
                         <a name="Sobre" id="sobre"  class="btn btn-dark" href="{% url 'listar-robos' 1 %}" role="button" >ListaRobos</a>
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
                         <a name="Lista" id="lista"  class="btn btn-dark" href="{% url 'listar-campo' 1 %}" role="button" >ListaCampo</a>
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
-                        <a name="Ajuda" id="ajuda"  class="btn btn-dark" href="{% url 'sobre' %}" role="button" >Ajuda</a>
+                        
                         
                     </ul>
 
