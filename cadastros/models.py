@@ -8,7 +8,7 @@ class Campo(models.Model):
     def __str__(self):
         return "{} ({})".format(self.nome, self.descricao)
     
-class Atividade(models.Model):
+class Robos(models.Model):
     numero = models.IntegerField(verbose_name="Numero")
     descricao = models.CharField(max_length=150, verbose_name="Descricao")
     pontos = models.DecimalField(decimal_places=1, max_digits=4)
