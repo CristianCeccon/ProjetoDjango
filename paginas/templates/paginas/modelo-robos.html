@@ -68,8 +68,8 @@
                     <ul class="navbar-nav mr-auto">
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >______________________________________</a>
                         <a name="Inicio" id="Inicio" class="btn btn-dark" href="{% url 'index' %}" role="button" >Inicio</a>
-                        <!--{% if request.user.is_authenticated %}-->
-                        {% endif %}
+                        <!--{% if request.user.is_authenticated %}
+                        {% endif %}-->
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
                         <a name="Sobre" id="sobre"  class="btn btn-dark" href="{% url 'sobre' %}" role="button" >Sobre</a>
                         <a name="Area" id="area"  class="btn bg-transparent" href="" width="20000" role="button" >___</a>
@@ -109,13 +109,13 @@
                         </li>
                         {% else %}
                         <li class="nav-item ">
-                            <a class="nav-link" href="{% url 'registrar' %}">
+                            <a class="nav-link" href="">
                                 <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 Registrar
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="{% url 'login' %}">
+                            <a class="nav-link" href="">
                                 <i class="fa fa-sign-in" aria-hidden="true"></i>
                                 Login
                             </a>
@@ -188,9 +188,6 @@
                         <span>Desenvolvido por Cristian Ceccon</span>
                     </p>
                 </div>
-                <!-- <div class="col-md text-left">
-                    <img src="{% static 'img/ifpr.png' %}" height="100" alt="">
-                </div> -->
 
                 </p>
             </div>
