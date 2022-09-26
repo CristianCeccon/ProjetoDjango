@@ -19,3 +19,36 @@
 
 {% endblock conteudo %}
 
+{% block scripts %}
+
+<script src="{% static "js/jquery.mask.min.js" %}"></script>
+
+<script>
+
+    //Teste Maskara
+    $(document).ready(function(){
+
+        //exemplo de como modificar a mascara segundo a condição
+        /*var SPMaskBehavior = function (val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+        },
+        spOptions = {
+        onKeyPress: function(val, e, field, options) {
+            field.mask(SPMaskBehavior.apply({}, arguments), options);
+            }
+        };
+
+        $('.sp_celphones').mask(SPMaskBehavior, spOptions);*/
+
+        // Exemplo de padrão data com input e " =* "
+        //$("input[id=*data_]").mask("000_00000");
+
+        $("#id_descricao").mask("AAAA_AAAA");
+        
+    });
+
+    
+</script>
+
+
+{% endblock %}
