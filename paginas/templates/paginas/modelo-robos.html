@@ -24,6 +24,9 @@
     <!-- CSS adicional -->
     <link href="{% static 'css/ifpr.css' %}" rel="stylesheet">
 
+    <!-- CSS datatable -->
+    <link href="{% static 'css/datatables.min.css' %}" rel="stylesheet">
+
     <!-- Importação do Datatables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css" />
 
@@ -201,7 +204,16 @@
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
+    <script src="{% static 'js/datatables.min.js' %}"></script>
+
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
+
+    <script>
+        // Comando para paginação "table"
+        $(document).ready(function(){
+            $("table").DataTable();
+        });
+    </script>
 
     <!-- Bloco destinado aos scripts para cada página -->
     {% block scripts %}
