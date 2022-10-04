@@ -11,5 +11,84 @@
 {% block conteudo %}
     <h1>BEM VINDO PILOTO!</h1>
 
+    <a name="BotaoEsconderDiv" id="BotaoMostrarDiv1" class="btn btn-primary" role="button"> MostrarDiv</a>
+
+    <a name="BotaoEsconderDiv" id="BotaoMostrarDiv2" class="btn btn-primary"  role="button"> MostrarDiv2</a>
+
+    <a name="BotaoEsconderDiv" id="BotaoMostrarDiv3" class="btn btn-primary"  role="button"> MostrarDiv3</a>
+
+    
+
+
+    <div class="div-teste p-2 my-2 bg-secondary" id="divMostrar1">
+        Novas Promoções
+    </div>
+
+    <div class="div-teste p-2 my-2 bg-primary" id="divMostrar2" style="display:none" >
+        Alertas
+    </div>
+
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text"
+        class="form-control" name="" id="input-text" aria-describedby="helpId" placeholder="Digite aqui" value="40">
+      <small id="helpId" class="form-text text-muted">Texto de ajuda</small>
+    </div>
+
     <img src="{% static 'img/imagem.jpg' %}" width="1000"alt="">
 {% endblock conteudo %}
+
+{% block scripts %}
+
+<script>
+
+    $(document).ready(function(){
+        alert("START");
+
+        $("#BotaoMostrarDiv1").click(function(){
+
+            $("#divMostrar2").hide();
+            $("#divMostrar1").fadeIn()();
+
+        });
+
+        $("#BotaoMostrarDiv2").click(function(){
+
+            $("#divMostrar1").hide();
+
+            var v = $("#input-text").val(); // Valor do Input
+            
+            $("#divMostrar2").text(v); // seta texto em div
+
+            $("#divMostrar2").removeClass('bg-success').addClass('bg-primary')
+
+            $("#divMostrar2").fadeIn();
+
+        });
+
+        $("#BotaoMostrarDiv3").click(function(){
+
+            $("#divMostrar1").hide();
+            
+            $("#divMostrar2").removeClass('bg-primary').addClass('bg-success'); // seta texto em div
+
+            $("#divMostrar2").fadeIn();
+
+        });
+
+        $("#divMostrar1").mouseenter(function(){
+
+            $("#divMostrar1").removeClass('bg-secondary').addClass('bg-success');
+
+        });
+
+        $("#divMostrar1").mouseout(function(){
+
+            $("#divMostrar1").removeClass('bg-success').addClass('bg-secondary');
+
+        });
+    });
+
+</script>
+
+{% endblock scripts %}
