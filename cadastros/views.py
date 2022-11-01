@@ -57,6 +57,10 @@ class RobosDelete(DeleteView):
 class CampoList(ListView):
     model = Campo
     template_name = 'cadastros/listas/campo.html'
+    
+    #def get_queryset(self):
+        #self.object_list = Campo.objects.select_related('nome', 'descricao'); #Exemplo de Select Related
+        #return self.object_list;
 
 
 class RobosList(ListView):

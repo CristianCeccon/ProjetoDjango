@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Campo(models.Model):
-    nome = models.CharField(max_length=50)
+    nome = models.CharField(max_length=50, verbose_name="Nome")
     descricao = models.CharField(max_length=150, verbose_name="Descricao")
     
     def __str__(self):

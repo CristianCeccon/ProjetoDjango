@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'paginas.apps.PaginasConfig',
-    'cadastros.apps.CadastrosConfig'
+    'cadastros.apps.CadastrosConfig',
+
+    'debug_toolbar' # ativar o app - 31/10
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    "debug_toolbar.middleware.DebugToolbarMiddleware", # 31/10
 ]
 
 ROOT_URLCONF = 'ProjetoDjango.urls'
@@ -128,3 +132,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django debug toolbar - 31/10
+
+INTERNAL_IPS = [
+
+    "127.0.0.1",
+
+]
